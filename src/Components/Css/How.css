@@ -1,0 +1,112 @@
+body{
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+}
+
+.work-section{
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 70px;
+    position: relative;
+    overflow: hidden;
+    background-color: whitesmoke;
+}
+
+.work-section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 35px;
+    width: 32px;
+    height: 100%;
+    /* background: black; */
+}
+
+.left-content{
+    position: relative;
+    z-index: 2;
+}
+
+.left-content h1{
+    font-size: 28px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin-bottom: 28px;
+}
+
+.left-content p{
+    font-size: 20px;
+    line-height: 1.8;
+    font-weight: 600;
+    color: #2b2b2b;
+    margin-bottom: 35px;
+}
+
+.left-content button{
+    width: 170px;
+    height: 55px;
+    border: none;
+    border-radius: 6px;
+    background: #00aeb3;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.cards-container{
+    width: 100%;
+    position: relative;
+    margin-top: 50px;
+    height: 520px;
+}
+
+.work-card{
+    width: 320px;
+    min-height: 220px;
+    background: white;
+    border-radius: 14px;
+    padding: 28px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+
+    position: absolute;
+}
+
+
+.work-card .icon{
+    font-size: 38px;
+    display: block;
+    margin-bottom: 18px;
+}
+
+.work-card h2{
+    font-size: 24px;
+    line-height: 1.4;
+    color: #222;
+    margin-bottom: 18px;
+    font-weight: 700;
+}
+
+.work-card p{
+    font-size: 20px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.card-one{
+    left: 10px;
+    bottom: 20px;
+}
+
+.card-two{
+    left: 370px;
+    top: 120px;
+}
+
+.card-three{
+    right: 40px;
+    top: 10px;
+}
