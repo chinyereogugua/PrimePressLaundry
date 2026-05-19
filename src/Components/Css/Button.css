@@ -1,8 +1,11 @@
 .btn{
-    width: 160px;
-    height: 55px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    background-color: red;
+  width: 220px;
+  height: 70px;
+  border: none;
+  cursor: pointer;
+  border-radius: 7px;
+  /* border: 1px solid rgba(0, 0, 0, 0.7); */
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background: rgba(0, 163, 170, 1);
+  font-size: 20px;
 }

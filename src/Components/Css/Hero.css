@@ -1,0 +1,270 @@
+.hero-container {
+  width: 100%;
+  min-height: 120vh;
+  background: white;
+  display: flex;
+  overflow: hidden;
+  border-bottom: 1px solid #e5e5e5;
+}
+.hero-left {
+  width: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+}
+.hero-left-img {
+  width: 350px;
+  height: 200px;
+  border-radius: 600%;
+  /* background: rgba(144, 184, 200, 0.5); */
+  position: absolute;
+  top: 25px;
+  left: -60px;
+  filter: blur(5);
+  z-index: 1;
+}
+.hero-left-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.hero-left-content h1 {
+  font-size: 75px;
+  line-height: 1.05;
+}
+.hero-left-content p {
+  font-size: 40px;
+}
+.hero-btn-holder {
+  display: flex;
+  gap: 20px;
+}
+
+.pickup-btn {
+  width: 220px ;
+  height: 70px;
+  background: rgba(0, 163, 170, 1);
+  color: white;
+  font-size: 20px;
+}
+
+.pricing-btn {
+  width: 220px;
+  height: 70px;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background: white;
+  font-size: 20px;
+}
+.hero-right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 40px;
+}
+.hero-right-holder {
+  width: 630px;
+  height: 520px;
+  border-radius: 40px 120px 40px 120px;
+  overflow: hidden;
+  box-shadow: 0px 10px 30px rgba(0, 163, 170, 0.2);
+}
+.hero-right-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero-container {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+
+  background: #f5f5f5;
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding-top: 120px;
+}
+
+TOP LEFT BLUR EFFECT
+.hero-container::before {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  top: -30px;
+  left: -20px;
+
+  background:rgba(144, 184, 200, 0.5);
+
+  border-radius: 50%;
+
+  filter: blur(10px);
+
+  z-index: 0;
+}
+
+.hero-wrapper {
+  width: 95%;
+  max-width: 1440px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+LEFT SIDE
+.hero-left {
+  width: 45%;
+  background-color: red;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 35px;
+}
+
+.hero-left h1 {
+  font-size: 78px;
+
+  line-height: 1.05;
+
+  font-weight: 700;
+
+  color: #1a1a1a;
+}
+
+.hero-left p {
+  width: 85%;
+
+  font-size: 28px;
+
+  line-height: 1.4;
+
+  color: #333;
+}
+
+BUTTONS
+.hero-btn-holder {
+  display: flex;
+
+  gap: 20px;
+}
+
+.pickup-btn {
+  width: 220px;
+  height: 70px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: rgba(0, 163, 170, 1);
+
+  color: white;
+
+  font-size: 20px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.pickup-btn:hover {
+  transform: translateY(-3px);
+}
+
+.pricing-btn {
+  width: 220px;
+  height: 70px;
+
+  border-radius: 10px;
+
+  border: 2px solid #d8d8d8;
+
+  background: white;
+
+  color: #333;
+
+  font-size: 20px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.pricing-btn:hover {
+  background: #f1f1f1;
+}
+
+RIGHT SIDE
+.hero-right {
+  width: 50%;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-right img {
+  width: 100%;
+  max-width: 700px;
+
+  border-radius: 40px;
+
+  object-fit: cover;
+
+  box-shadow: 0px 10px 30px rgba(0, 163, 170, 0.2);
+} */
