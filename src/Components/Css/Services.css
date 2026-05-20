@@ -1,5 +1,104 @@
 .services-container{
     width: 100%;
     min-height: 100vh;
-    background-color: teal;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-wrapper{
+  width: 90%;
+  height:100vh;
+  /* background-color: wh; */
+  display: flex;
+}
+.services-left{
+    width: 60%;
+    /* background-color: red; */
+    display: flex;
+    padding-top: 70px;
+}
+/* Container that holds the composition */
+.image-wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  width: 400px; /* Adjust container size as needed */
+  height: 400px;
+  position: relative;
+}
+
+/* Base styles for both image frames */
+.img-large, .img-small {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Large Background Image */
+.img-large {
+  grid-column: 1 / 10; /* Spans from column 1 to 10 */
+  grid-row: 1 / 11;    /* Spans from row 1 to 11 */
+  border-radius: 40px 12px 12px 12px; /* Smooth, prominent top-left curve */
+}
+
+/* Small Overlapping Foreground Image */
+.img-small {
+  grid-column: 11/ 18; /* Overlaps from column 7 to 13 */
+  grid-row: 11 / 18;    /* Overlaps from row 7 to 13 */
+  border-radius: 12px 12px 40px 12px; /* Smooth, prominent bottom-right curve */
+  
+  /* Premium, highly diffused drop shadow to create depth */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 
+              0 8px 16px rgba(0, 0, 0, 0.04);
+  
+  /* Optional: adds a crisp border to separate from the background image */
+  border: 4px solid #ffffff; 
+  z-index: 2;
+}
+
+/* The subtle dashed accent line on the bottom right */
+.accent-line {
+  position: absolute;
+  bottom: -30px;
+  right: 15px;
+  width: 2px;
+  height: 50px;
+  border-left: 2px dashed #3b82f6; /* Modern fintech-style blue accent */
+  z-index: 1;
+}
+.services-right{
+    width: 40%;
+    /* background-color: w; */
+}
+.services-right1{
+    width: 100%;
+    height: 20%;
+    line-height: 44px;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: end;
+}
+.services-right1 h2{
+    font-size: 35px;
+    font-weight: bold;
+}
+.services-right2{
+    width: 100%;
+    height: 30%;
+    /* background-color: green; */
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+}
+.services-right2 p{
+    font-size: 25px;
+    font-weight: 500;
+    /* letter-spacing: 6px; */
+}
+.services-right3{
+    width: 100%;
+    height: 50%;
+    background-color: darkorchid;
 }
