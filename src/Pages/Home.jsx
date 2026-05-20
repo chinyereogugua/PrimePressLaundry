@@ -6,7 +6,8 @@ import Services from "../Components/Services.jsx"
 import How from '../Components/How.jsx'
 import WhyChooseUs from '../Components/WhyChooseUs.jsx'
 import Testimonials from '../Components/Testimonials.jsx'
-
+import Footer1 from "../Components/Footer1.jsx"
+import Footer2 from "../Components/Footer2.jsx"
 
 const Home = () => {
   return (
@@ -17,6 +18,8 @@ const Home = () => {
         <How/>
         <WhyChooseUs/>
         <Testimonials/>     
+        <Footer1 />
+        <Footer2 />
     </main>
   )
 }
