@@ -1,0 +1,124 @@
+.footer1b-container {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+.footer1b-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.footer1b-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer1b-cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.footer1b-overlay1 {
+  width: 28%;
+  height: 155px;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  border-radius: 14px;
+}
+.footer1b-overlay1-left {
+  width: 23%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 15px;
+}
+.footer1b-overlay1-left img {
+  width: 40px;
+  height: 29px;
+}
+.footer1b-overlay1-right {
+  width: 77%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 15px;
+}
+.footer1b-overlay1-right h2 {
+  font-size: 26.5px;
+  font-weight: 500;
+  display: flex;
+}
+.footer1b-overlay1-right p {
+  font-size: 18.5px;
+  display: flex;
+  text-align: start;
+}
+.footer1b-overlay2 {
+  width: 28%;
+  height: 155px;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  gap: 15px;
+  border-radius: 14px;
+}
+.footer1b-overlay2-left {
+  width: 23%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 15px;
+}
+.footer1b-overlay2-left img {
+  width: 40px;
+  height: 29px;
+}
+.footer1b-overlay2-right {
+  width: 77%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 15px;
+}
+.footer1b-overlay2-right h2 {
+  font-size: 26.5px;
+  font-weight: 500;
+  display: flex;
+}
+.footer1b-overlay2-right p {
+  font-size: 18.5px;
+  display: flex;
+  text-align: start;
+}
+.footer1b-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 100px;
+}
+.footer1b-bottom img {
+  width: 23.25px;
+  height: 28.08px;
+}
+
+.footer1b-bottom p {
+  font-size: 20px;
+  color: white;
+}

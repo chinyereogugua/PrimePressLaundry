@@ -2,7 +2,7 @@
   width: 220px;
   height: 70px;
   border: none;
-  cursor: pointer;
+  cursor: pointer; 
   border-radius: 7px;
   /* border: 1px solid rgba(0, 0, 0, 0.7); */
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
