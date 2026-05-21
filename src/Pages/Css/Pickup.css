@@ -1,0 +1,6 @@
+.pickup-container{
+    width: 100%;
+    height: 100vh;
+    min-height: max-content;
+    background-color: red;
+}
