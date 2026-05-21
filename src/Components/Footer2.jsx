@@ -2,7 +2,9 @@ import React from 'react'
 import "./Css/Footer2.css"
 import { FaEnvelope } from "react-icons/fa";
 import { FaMapMarkerAlt } from "react-icons/fa";
-
+import Vector4 from "../assets/Vector (4).png"
+import Instagram from "../assets/Instagram.jpg"
+import Vector5 from "../assets/Vector (5).png"
 const Footer2 = () => {
   return (
     <main className='footer2-container'>
@@ -26,13 +28,26 @@ const Footer2 = () => {
                 </article>
             </article>
             <article className='footer2-open'>
-                
+                <h2>OPEN HOURS</h2>
+                <p>Mon - Sat: 9 am - 7 pm</p>
+                <p>Sunday: Closed</p>
             </article>
-            <article className='footer2-help'></article>
-            <article className='footer2-follow'></article>
+            <article className='footer2-help'>
+                <h2>HELP & SUPPORT</h2>
+                <p>Contact Us</p>
+                <p>Chat 24/7 Services</p>
+            </article>
+            <article className='footer2-follow'>
+                <h2>FOLLOW US</h2>
+                <article className='footer2-follow1'>
+                <img src={Vector4} alt="" />
+                <img src={Instagram} alt="" />
+                <img src={Vector5} alt="" />
+                </article>
+            </article>
         </section>
     </main>
   )
-}
+}   
 
 export default Footer2
