@@ -42,15 +42,6 @@
   display: flex;
   gap: 20px;
 }
-
-/* .pickup-btn {
-  width: 220px ;
-  height: 70px;
-  background: rgba(0, 163, 170, 1);
-  color: white;
-  font-size: 23px;
-} */
-
 .pricing-btn {
   width: 220px;
   height: 70px;
