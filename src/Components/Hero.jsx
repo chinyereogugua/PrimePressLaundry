@@ -3,8 +3,10 @@ import "./Css/Hero.css";
 import Ellipse from "../assets/Ellipse 48 (2).png"
 import Rectangle from "../assets/Rectangle 4.png";
 import Button from "../Components/Button.jsx"
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+const nav = useNavigate()
   return (
     <main className="hero-container">
       <section className="hero-left">
@@ -24,8 +26,8 @@ const Hero = () => {
             deliver... all <br /> within 24 hours.
           </p>
           <div className="hero-btn-holder">
-            <Button className="pickup-btn" btnText="Book a Pickup"  />
-            <Button className="pricing-btn" btnText="See Pricing" />
+            <Button className="pickup-btn"  btnText="Book a Pickup" onClick={()=> nav ("/pick")}  />
+            <Button className="pricing-btn" btnText="See Pricing"  onClick={()=> nav ("/service")}/>
           </div>
         </article>
       </section>
