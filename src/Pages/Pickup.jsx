@@ -5,7 +5,6 @@ import Hero3 from "../Components/Hero3.jsx"
 import Booking from "../Components/Booking.jsx"
 import Footer1b from '../Components/Footer1b.jsx'
 import Footer2 from '../Components/Footer2.jsx'
-
 const Pickup = () => {
   return (
     <main className='pickup-container'>

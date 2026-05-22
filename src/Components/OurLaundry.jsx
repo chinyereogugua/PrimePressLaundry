@@ -1,7 +1,10 @@
 import React from "react";
 import "./Css/OurLaundry.css";
+import Button from "../Components/Button"
+import { useNavigate } from "react-router-dom";
 
 const OurLaundry = () => {
+const nav = useNavigate()
   return (
     <div className="laundry-hero">
       <div className="laundry-content">
@@ -13,7 +16,7 @@ const OurLaundry = () => {
           Quality laundry service at affordable, <br/>transparent prices.
         </p>
 
-        <button className="laundry-btn">Book a Pickup</button>
+        <Button onClick={()=> nav ("/pick")} className="laundry-btn" btnText="Book a Pickup" />
       </div>
     </div>
   );

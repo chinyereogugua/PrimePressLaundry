@@ -1,9 +1,10 @@
 import React from "react";
 import "./Css/Cleaning.css";
-
 import { WashingMachine, Shirt, ScanLine, Clock3 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Cleaning = () => {
+const nav = useNavigate()
   return (
     <div className="cleaning-container">
       <div className="cleaning-header">
@@ -28,7 +29,7 @@ const Cleaning = () => {
             We wash, dry and neatly <br /> fold your laundry
           </p>
           </div>
-          <button>Book Now</button>
+          <button onClick={()=> nav("/pick")}>Book Now</button>
         </div>
 
         <div className="clean-card">
@@ -41,7 +42,7 @@ const Cleaning = () => {
             Professional dry cleaning <br /> for delicate garments.
           </p>
           </div>
-          <button>Book Now</button>
+          <button onClick={()=> nav("/pick")}>Book Now</button>
         </div>
 
         <div className="clean-card">
@@ -54,7 +55,7 @@ const Cleaning = () => {
             Expert ironing for wrinkle <br /> clothes.
           </p>
           </div>
-          <button>Book Now</button>
+          <button onClick={()=> nav("/pick")}>Book Now</button>
         </div>
 
         <div className="clean-card">
@@ -67,7 +68,7 @@ const Cleaning = () => {
             Fast same-day laundry <br /> service available.
           </p>
           </div>
-          <button>Book Now</button>
+          <button onClick={()=> nav("/pick")}>Book Now</button>
         </div>
 
       </div>

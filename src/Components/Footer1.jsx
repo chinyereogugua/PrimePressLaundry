@@ -2,7 +2,9 @@ import React from "react";
 import "./Css/Footer1.css";
 import FirstFooterBackground from "../assets/FirstFooterBackground.jpg";
 import Button from "../Components/Button.jsx"
+import { useNavigate } from "react-router-dom";
 const Footer1 = () => {
+const nav = useNavigate()
   return (
     <main className="footer1-container">
       <img
@@ -14,7 +16,7 @@ const Footer1 = () => {
       <div className="footer1-overlay">
         <h1>Let’s Take Laundry Off Your To-Do List.</h1>
 
-        <Button btnText="Book Your First Pickup Today" className="footer1-overlay-btn"/>
+        <Button onClick={()=> nav("/service")} btnText="Book Your First Pickup Today" className="footer1-overlay-btn"/>
       </div>
     </main>
   );
