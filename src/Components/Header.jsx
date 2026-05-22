@@ -21,7 +21,7 @@ const Header = () => {
             </article>
             <article className='header-right'>
                 <h2>Sign Up</h2>
-                <Button className="header-right-btn" btnText="Book Now" />
+                <Button className="header-right-btn" onClick={()=> nav("/pick")} btnText="Book Now" />
             </article>
         </section>
     </main>
