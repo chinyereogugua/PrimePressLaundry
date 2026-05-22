@@ -1,11 +1,5 @@
 
-
-
-
-
-
-
-.signupEmailverify-container{
+.loginEmailverify-container{
     width: 100%;
     height: 100vh;
     background-color: white;
@@ -14,7 +8,7 @@
     justify-content: center;
     align-items: center;
 }
-.signupEmailverify-wrapperlogo{
+.loginEmailverify-wrapperlogo{
     width:32%;
     height:15%;
     /* background-color: gold; */
@@ -22,19 +16,19 @@
     justify-content: center;
     padding-top: 20px;
 }
-.signupEmailverify-wrappertext{
-    width: 25%;
+.loginEmailverify-wrappertext{
+    width: 26%;
     height: 60%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
 }
-.signupEmailverify-wrappertext-holder{
+.loginEmailverify-wrappertext-holder{
     width: 88%;
     height: 100%;
 }
-.signupEmailverify-heading{
+.loginEmailverify-heading{
     width: 100%;
     height: 24%;
     /* background-color: yellow; */
@@ -45,16 +39,16 @@
     align-items: center;
     padding-top: 20px;
 }
-.signupEmailverify-heading h4{
+.loginEmailverify-heading h4{
     font-size: 23px;
     font-weight: 549
 }
-.signupEmailverify-heading p{
+.loginEmailverify-heading p{
     font-size: 17px;
     display: flex;
     text-align: center;
 }
-.signupEmailverify-otp{
+.loginEmailverify-otp{
     width: 100%;
     height: 20%;
     /* background-color: darkgray; */
@@ -63,18 +57,18 @@
     /* align-items: center; */
     flex-direction: column;
 }
-.signupEmailverifyy-otp h4{
+.loginEmailverify-otp h4{
     font-size: 19px;
     font-weight: 500;
     margin-top: 20px;
 }
-.signupEmailverify-otp1{
+.loginEmailverify-otp1{
     display: flex;
     gap: 9px;
     justify-content: center;
     /* flex-direction: column; */
 }
-.signupEmailverify-otp1 input{
+.loginEmailverify-otp1 input{
     width: 14.9%;
     height: 45px;
     background-color: white;
@@ -82,18 +76,18 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 5px;
 }
-.signupEmailverify-button{
+.loginEmailverify-button{
     width: 100%;
     height: 16%;
     /* background-color: cadetblue; */
     display: flex;
     align-items: center;
 }
-.signupEmailverify-btn{
+.loginEmailverify-btn{
     width: 100%;
     height: 56px;
 }
-.signupEmailverify-otp-expires{
+.loginEmailverify-otp-expires{
     width: 100%;
     height: 40%;
     display: flex;
@@ -102,11 +96,11 @@
     padding-top: 19px;
     gap: 15px;
 }
-.signupEmailverify-otp-expires p{
+.loginEmailverify-otp-expires p{
     font-size: 17px;
     /* padding-left: 4px; */
 }
-.signupEmailverify-otp-expires span{
+.loginEmailverify-otp-expires span{
     color:rgba(0, 163, 170, 1) ;
     padding: 4px;
 }

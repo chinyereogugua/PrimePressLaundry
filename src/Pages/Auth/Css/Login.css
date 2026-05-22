@@ -1,0 +1,128 @@
+.login-container{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-wrapperlogo{
+    width:32%;
+    height:15%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+.login-wrappertext{
+    width: 25%;
+    height: 60%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+.login-wrappertext-holder{
+    width: 88%;
+    height: 100%;
+}
+.login-heading{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+.login-heading p{
+    font-size: 23px;
+}
+
+.login-email{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.login-email p{
+    font-size: 21px;
+    padding-top: 6px;
+}
+.login-email-input{
+    width: 100%;
+    height:56px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 163, 170, 1);
+    padding-left: 12px;
+}
+.login-email-input::placeholder{
+    font-size:17px;
+    color: grey;
+}
+.login-password{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.login-password p{
+    font-size: 21px;
+    padding-top: 6px;
+}
+.login-password-holder{
+    width: 100%;
+    height:56px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 163, 170, 1);
+}
+.login-password-input{
+    width: 92%;
+    height: 100%;
+    padding-left: 12px;
+    border: none;
+}
+ .login-password-input::placeholder{
+    font-size:17px;
+    color: grey;
+ }
+.login-password-icon{
+    font-size: 20px;
+    margin-top: 8px;
+}
+ .login-forgetpassword{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: flex-end;
+ }
+ .login-forgetpassword p{
+    font-size:17px;
+    padding-top: 5px;
+ }
+.login-button{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+.login-btn{
+    width: 100%;
+    height: 56px;
+}
+.login-resignup{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    padding-top: 19px;
+    gap: 15px;
+}
+.login-resignup p{
+    font-size: 17px;
+}
+.login-resignup span{
+    color:rgba(0, 163, 170, 1) ;
+    /* padding: 4px; */
+}
