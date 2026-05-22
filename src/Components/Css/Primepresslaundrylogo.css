@@ -1,0 +1,24 @@
+.primepresslogo{
+    width: 268px;
+    height: 60px;
+    display: flex;
+    background-color: transparent;
+}
+.primepresslogo-left{
+    width: 20%;
+    height: 100%;
+}
+.primepresslogo-left img{
+    width: 40px;
+    height: 40px;
+}
+.primepresslogo-right{
+    width: 80%;
+    height: 100%;
+    color: rgba(0, 163, 170, 1);
+}
+.primepresslogo-right h1{
+    font-size: 29px;
+    font-weight: bold;
+    line-height: 0.9;
+}
