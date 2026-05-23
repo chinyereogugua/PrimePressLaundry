@@ -1,6 +1,5 @@
 import React from "react";
 import "./Css/Dashboard.css";
-
 import {
   LayoutDashboard,
   ShoppingBag,
@@ -18,8 +17,11 @@ import {
   Truck,
 } from "lucide-react";
 import Primepresslaundrylogo from "../Components/Primepresslaundrylogo";
+import { useNavigate } from "react-router-dom";
+import Manstanding from "../assets/Manstanding.png"
 
 const Dashboard = () => {
+const nav = useNavigate()
   return (
     <div className="dashboard">
       <div className="sidebar">
@@ -34,7 +36,7 @@ const Dashboard = () => {
               <LayoutDashboard size={18} />
               <span>Dashboard</span>
             </div>
-            <div className="sidebar-item">
+            <div className="sidebar-item" onClick={()=> nav("/order")}>
               <ShoppingBag size={18} />
               <span>Orders</span>
             </div>
@@ -75,15 +77,15 @@ const Dashboard = () => {
 
           <div className="topbar-right">
             <Bell className="bell-icon" size={20} />
-            <div className="admin-profile">
-              <img
-                src="https://i.pravatar.cc/100"
-                alt="admin"
-              />
               <div>
                 <h4>Admin User</h4>
                 <p>Store Manager</p>
               </div>
+               <div className="admin-profile">
+              <img
+                src={Manstanding}
+                alt="admin"
+              />
             </div>
           </div>
         </div>
