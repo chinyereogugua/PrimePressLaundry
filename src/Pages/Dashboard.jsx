@@ -1,94 +1,22 @@
 import React from "react";
 import "./Css/Dashboard.css";
 import {
-  LayoutDashboard,
-  ShoppingBag,
-  Users,
-  BarChart3,
-  Settings,
-  Bell,
-  Search,
   FileText,
   Plus,
-  LogOut,
   ClipboardList,
   RefreshCw,
   CheckCircle2,
   Truck,
 } from "lucide-react";
-import Primepresslaundrylogo from "../Components/Primepresslaundrylogo";
-import { useNavigate } from "react-router-dom";
-import Manstanding from "../assets/Manstanding.png"
+import SideBar from "../Components/SideBar";
+import TopBar from "../Components/TopBar";
 
 const Dashboard = () => {
-const nav = useNavigate()
   return (
     <div className="dashboard">
-      <div className="sidebar">
-        <div>
-
-          <div className="logo">
-            <Primepresslaundrylogo/>
-          </div>
-
-          <div className="sidebar-links">
-            <div className="sidebar-item active">
-              <LayoutDashboard size={18} />
-              <span>Dashboard</span>
-            </div>
-            <div className="sidebar-item" onClick={()=> nav("/order")}>
-              <ShoppingBag size={18} />
-              <span>Orders</span>
-            </div>
-            <div className="sidebar-item">
-              <Users size={18} />
-              <span>Customers</span>
-            </div>
-            <div className="sidebar-item">
-              <BarChart3 size={18} />
-              <span>Review Analytics</span>
-            </div>
-            <div className="sidebar-item">
-              <Settings size={18} />
-              <span>Settings</span>
-            </div>
-          </div>
-         </div>
-
-        <div className="logout">
-          <LogOut size={18} />
-          <span>Logout</span>
-        </div>
-      </div>
-
+        <SideBar/>
       <div className="dashboard-main">
-        <div className="topbar">
-          <div className="topbar-left">
-            <h3>Overview</h3>
-
-            <div className="search-box">
-              <Search size={16} />
-              <input
-                type="text"
-                placeholder="Search orders, customers..."
-              />
-            </div>
-          </div>
-
-          <div className="topbar-right">
-            <Bell className="bell-icon" size={20} />
-              <div>
-                <h4>Admin User</h4>
-                <p>Store Manager</p>
-              </div>
-               <div className="admin-profile">
-              <img
-                src={Manstanding}
-                alt="admin"
-              />
-            </div>
-          </div>
-        </div>
+        <TopBar title={"Overview"}/>
 
         <div className="welcome-top">
         <div className="welcome-section">
