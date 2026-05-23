@@ -19,8 +19,8 @@ const Header = () => {
                 <h2 className='header-middle2' onClick={() => nav("/service")}>Service & Pricing</h2>
                 <h2 className='header-middle2' onClick={() => nav("/pick")}>Pickup</h2>
             </article>
-            <article className='header-right' onClick={()=> nav ("/signup")}>
-                <h2>Sign Up</h2>
+            <article className='header-right'>
+                <h2 onClick={()=> nav ("/signup")}>Sign Up</h2>
                 <Button className="header-right-btn" onClick={()=> nav("/pick")} btnText="Book Now" />
             </article>
         </section>

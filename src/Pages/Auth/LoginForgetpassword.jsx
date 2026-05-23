@@ -3,8 +3,9 @@ import "./Css/LoginForgetpassword.css"
 import Primepresslaundrylogo from "../../Components/Primepresslaundrylogo.jsx";
 import Input from "../../Components/Input.jsx";
 import Button from "../../Components/Button.jsx";
-
+import { useNavigate } from "react-router-dom";
 const LoginForgetpassword = () => {
+const nav = useNavigate()
   return (
     <main className="loginForgetpassword-container">
       <section className="loginForgetpassword-wrapperlogo">
@@ -20,8 +21,8 @@ const LoginForgetpassword = () => {
             <p> Email</p>
             <Input placeholder="Email" className="loginForgetpassword-email-input" />
           </article>
-          <article className="loginForgetpassword-button">
-            <Button btnText="Login" className="loginForgetpassword-btn" />
+          <article className="loginForgetpassword-button" >
+            <Button onClick={()=> nav("/login")} btnText="Login" className="loginForgetpassword-btn"  />
           </article>
         </section>
       </section>

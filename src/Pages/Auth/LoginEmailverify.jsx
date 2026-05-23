@@ -15,7 +15,7 @@ const LoginEmailverify = () => {
             <h4>Forget Password</h4>
             <p>
               A 6 digit code has been sent to your email address, <br />
-              nter the code to reset password
+              enter the code to reset password
             </p>
           </article>
           <article className="loginEmailverify-otp">

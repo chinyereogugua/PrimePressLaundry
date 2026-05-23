@@ -4,8 +4,10 @@ import Primepresslaundrylogo from '../../Components/Primepresslaundrylogo'
 import Input from "../../Components/Input.jsx"
 import Button from "../../Components/Button.jsx"
 import { FaEye } from "react-icons/fa6";
+import { useNavigate } from 'react-router-dom'
 
 const LoginResetpassword = () => {
+const nav = useNavigate()
   return (
    <main className='loginResetpassword-container'>
     <section className='loginResetpassword-wrapperlogo'>
@@ -31,7 +33,7 @@ const LoginResetpassword = () => {
             </article>
           </article>
           <article className='loginResetpassword-button'>
-             <Button btnText="Reset" className="loginResetpassword-btn" />
+             <Button onClick={()=> nav("/login")} btnText="Reset" className="loginResetpassword-btn" />
           </article>
             </section>
           </section>
