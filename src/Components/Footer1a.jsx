@@ -3,6 +3,7 @@ import "./Css/Footer1a.css";
 import FirstFooterBackground from "../assets/FirstFooterBackground.jpg";
 import Button from "../Components/Button.jsx"
 import { useNavigate } from "react-router-dom";
+
 const Footer1a = () => {
 const nav = useNavigate()
   return (
