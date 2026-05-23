@@ -5,6 +5,7 @@ import {
   Bell,
   Search,
 } from "lucide-react";
+import Manstanding from "../assets/Manstanding.png"
 
 const TopBar = ({title}) => {
   return (
@@ -28,7 +29,7 @@ const TopBar = ({title}) => {
             <p>Store Manager</p>
           </div>
             <img
-            src="https://i.pravatar.cc/100"
+            src={Manstanding}
             alt="admin"
           />
         </div>
