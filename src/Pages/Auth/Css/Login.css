@@ -100,6 +100,7 @@
  .login-forgetpassword p{
     font-size:17px;
     padding-top: 5px;
+    cursor: pointer;
  }
 .login-button{
     width: 100%;
@@ -124,5 +125,5 @@
 }
 .login-resignup span{
     color:rgba(0, 163, 170, 1) ;
-    /* padding: 4px; */
+    cursor: pointer;
 }

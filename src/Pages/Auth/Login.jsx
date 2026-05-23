@@ -4,8 +4,10 @@ import Primepresslaundrylogo from '../../Components/Primepresslaundrylogo'
 import Input from "../../Components/Input.jsx"
 import Button from "../../Components/Button.jsx"
 import { FaEye } from "react-icons/fa6";
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
+const nav = useNavigate()
   return (
        <main className='login-container'>
         <section className='login-wrapperlogo'>
@@ -27,14 +29,14 @@ const Login = () => {
             <FaEye className='login-password-icon'/>
             </article>
           </article>
-          <article className='login-forgetpassword'>
+          <article className='login-forgetpassword' onClick={()=> nav ("/loginForgetpassword")} >
             <p>Forgot password?</p>
           </article>
-          <article className='login-button'>
+          <article className='login-button' onClick={()=> nav("/dashboard") }>
              <Button btnText="Login" className="login-btn" />
           </article>
-          <article className='login-resignup'>
-            <p>Don’t have an account? <span> Sign up</span></p>
+          <article className='login-resignup' onClick={()=> nav("/signup")} >
+            <p>Don’t have an account? <span>  Sign up</span></p>
             </article>
          </section>
          </section>
