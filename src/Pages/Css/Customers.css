@@ -62,6 +62,10 @@
     gap: 10px;
 }
 
+.order-info h2{
+    font-size: 19px;
+}
+
 .order-icon{
     width: 65px;
     height: 65px;
@@ -81,15 +85,18 @@
 }
 
 .order-tags span{
-    background: #f3f4f6;
+    background: white;
+    border: 1px solid lightgray;
     padding: 5px 12px;
     border-radius: 30px;
     font-size: 12px;
+    font-weight: bold;
 }
 
 .order-tags p{
     color: gray;
     font-size: 13px;
+    font-weight: bold;
 }
 
 .order-summary{
@@ -104,14 +111,21 @@
 .order-summary p{
     color: gray;
     font-size: 11px;
+    font-weight: bold;
     margin-bottom: 8px;
 }
 
-.order-summary h3{
-    color: #00bcd4;
+.summary-pd{
+    font-size: 12px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
 }
 
-/* DETAILS */
+.order-summary h3{
+    color: rgba(0, 163, 170, 1);
+    font-size: 16px;
+    font-weight: bold;
+}
 
 .details-container{
     display: grid;
@@ -131,6 +145,37 @@
     margin-bottom: 25px;
 }
 
+.details-header{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 10px;
+    /* background-color: #00bcd4; */
+    margin-bottom: 25px;
+}
+
+.details-header h3{
+    margin: 0;
+}
+
+.details-header-icon{
+    width: 38px;
+    height: 38px;
+    /* background: #e6f9fc; */
+    /* color: #00bcd4; */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.details-header-icon img{
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    object-fit: contain;
+}
+
 .details-item{
     display: flex;
     gap: 15px;
@@ -142,8 +187,6 @@
     color: #111827;
     margin-top: 5px;
 }
-
-/* TABLE */
 
 .service-table{
     margin-top: 25px;
@@ -163,19 +206,21 @@
 .table-header p{
     color: gray;
     margin-top: 5px;
+    font-weight: bold;
 }
 
 .table-header button{
     border: none;
     background: none;
-    color: #00bcd4;
+    color: rgba(0, 163, 170, 1);
     cursor: pointer;
     font-weight: 600;
+    font-size: 14px;
 }
 
 table{
     width: 100%;
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
 }
 
 thead{
@@ -185,8 +230,8 @@ thead{
 th{
     padding: 15px;
     text-align: left;
-    font-size: 13px;
-    color: #6b7280;
+    font-size: 16px;
+    color: black;
 }
 
 td{
@@ -194,11 +239,24 @@ td{
     border-bottom: 1px solid #f1f5f9;
 }
 
+.td-Des{
+    font-size: 17px;
+}
+
 .table-tag{
     background: #f3f4f6;
     padding: 6px 12px;
     border-radius: 20px;
     font-size: 12px;
+    color: gray;
+}
+
+.table-tag-num{
+    font-size: 16px;
+}
+
+.table-tag-tot{
+    font-weight: bold;
 }
 
 .table-total{
@@ -213,15 +271,20 @@ td{
     margin-bottom: 12px;
 }
 
+.table-total p{
+    font-size: 16px;
+}
+
 .grand-total{
     margin-top: 20px;
 }
 
 .grand-total h3{
-    color: #00bcd4;
+    color: rgba(0, 163, 170, 1);
 }
-
-/* NOTES */
+.grand-total p{
+    font-weight: bold;
+}
 
 .admin-notes{
     margin-top: 35px;
@@ -229,7 +292,7 @@ td{
 
 .admin-notes h4{
     color: #111827;
-    margin-bottom: 12px;
+    margin-bottom: 18px;
 }
 
 .admin-notes p{
@@ -238,8 +301,6 @@ td{
     line-height: 1.8;
     max-width: 700px;
 }
-
-/* RIGHT SIDE */
 
 .lifecycle-card,
 .driver-card{
@@ -256,6 +317,10 @@ td{
 
 .lifecycle-steps{
     margin-top: 30px;
+}
+
+.lifecycle-steps p{
+    font-size: 17px;
 }
 
 .step{
@@ -276,7 +341,7 @@ td{
 }
 
 .step.active .step-circle{
-    background: #00bcd4;
+    background: rgba(0, 163, 170, 1);
     color: white;
 }
 
@@ -292,7 +357,7 @@ td{
 .assign-btn{
     width: 100%;
     border: none;
-    background: #00bcd4;
+    background: rgba(0, 163, 170, 1);
     color: white;
     padding: 14px;
     border-radius: 12px;

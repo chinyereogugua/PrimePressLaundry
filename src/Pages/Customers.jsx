@@ -9,6 +9,7 @@ import {
   Truck,
   CheckCircle2,
   Printer,
+  Contact,
 } from "lucide-react";
 import SideBar from "../Components/SideBar";
 import TopBar from "../Components/TopBar";
@@ -58,7 +59,7 @@ const Customers = () => {
 
                   <div className="order-summary-texts">
                     <p>PAYMENT</p>
-                    <h4>Paid</h4>
+                    <h4 className="summary-pd">Paid</h4>
                   </div>
 
                   <div className="order-summary-texts">
@@ -71,7 +72,20 @@ const Customers = () => {
 
             <div className="details-container">
               <div className="details-card">
-                <h3>Customer Details</h3>
+                <div className="details-header">
+                    <div className="details-header-icon">
+                        <img src="https://i.pravatar.cc/100" alt="customer logo" />
+                    </div>
+                <     h3>Customer Details</h3>
+                </div>
+
+                <div className="details-item">
+                    <Contact size={16} color="rgba(0, 163, 170, 1)"  />
+                    <div>
+                        <p>Full Name</p>
+                        <h5>Sarah Johnson</h5>
+                    </div>
+                </div>
                 <div className="details-item">
                   <Phone size={16} />
                   <div>
@@ -90,58 +104,52 @@ const Customers = () => {
               </div>
 
               <div className="details-card">
-                <h3>Logistics Details</h3>
+                <div className="details-header">
+                    <div className="details-header-icon">
+                        <Truck size={18}/>
+                    </div>
+                   <h3>Logistics Details</h3>
+                </div>
 
                 <div className="details-item">
-
                   <MapPin size={16} />
-
                   <div>
                     <p>Pickup Address</p>
                     <h5>124 BlueLane, Seattle</h5>
                   </div>
-
                 </div>
 
                 <div className="details-item">
-
                   <Clock3 size={16} />
-
                   <div>
                     <p>Preferred Time</p>
                     <h5>Mar 26, 2PM - 4PM</h5>
                   </div>
-
                 </div>
 
+                <div className="details-item">
+                  <Truck size={16}  />
+                  <div>
+                    <p>Delivery Method</p>
+                    <h5>Contactless Drop-off</h5>
+                  </div>
+                </div>
               </div>
-
             </div>
 
-            {/* TABLE */}
-
             <div className="service-table">
-
               <div className="table-header">
-
                 <div>
-
                   <h3>Service Itemization</h3>
-
                   <p>
                     Detailed list of garments and service costs
                   </p>
-
                 </div>
-
                 <button>Edit Items</button>
-
               </div>
 
               <table>
-
                 <thead>
-
                   <tr>
                     <th>Item Description</th>
                     <th>Category</th>
@@ -149,59 +157,68 @@ const Customers = () => {
                     <th>Unit Price</th>
                     <th>Total</th>
                   </tr>
-
                 </thead>
 
                 <tbody>
-
                   <tr>
-                    <td>Premium Cotton Shirt</td>
+                    <td className="td-Des">Premium Cotton Shirt</td>
                     <td>
                       <span className="table-tag">
                         Menswear
                       </span>
                     </td>
-                    <td>5</td>
+                    <td className="table-tag-num">5</td>
                     <td>$4.50</td>
-                    <td>$22.50</td>
+                    <td className="table-tag-tot">$22.50</td>
                   </tr>
 
                   <tr>
-                    <td>Formal Trousers</td>
+                    <td className="td-Des">Formal Trousers</td>
                     <td>
                       <span className="table-tag">
                         Menswear
                       </span>
                     </td>
-                    <td>3</td>
+                    <td className="table-tag-num">3</td>
                     <td>$6.00</td>
-                    <td>$18.00</td>
+                    <td className="table-tag-tot">$18.00</td>
                   </tr>
 
                   <tr>
-                    <td>King Size Bedsheet</td>
+                    <td className="td-Des">King Size Bedsheet</td>
                     <td>
                       <span className="table-tag">
                         Home
                       </span>
                     </td>
-                    <td>1</td>
+                    <td className="table-tag-num">1</td>
                     <td>$12.00</td>
-                    <td>$12.00</td>
+                    <td className="table-tag-tot">$12.00</td>
                   </tr>
 
                   <tr>
-                    <td>Silk Scarf</td>
+                    <td className="td-Des">Silk Scarf</td>
                     <td>
                       <span className="table-tag">
                         Delicates
                       </span>
                     </td>
-                    <td>2</td>
+                    <td className="table-tag-num">2</td>
                     <td>$8.50</td>
-                    <td>$17.00</td>
+                    <td className="table-tag-tot">$17.00</td>
                   </tr>
 
+                  <tr>
+                    <td className="td-Des">Heavy Winter Coat</td>
+                    <td>
+                      <span className="table-tag">
+                        Outerwear
+                      </span>
+                    </td>
+                    <td className="table-tag-num">1</td>
+                    <td>$25.00</td>
+                    <td className="table-tag-tot">$25.00</td>
+                  </tr>
                 </tbody>
 
               </table>
@@ -222,17 +239,11 @@ const Customers = () => {
                   <p>Order Total:</p>
                   <h3>$99.22</h3>
                 </div>
-
               </div>
-
             </div>
 
-            {/* ADMIN NOTES */}
-
             <div className="admin-notes">
-
               <h4>• Internal Admin Notes</h4>
-
               <p>
                 “Customer requested extra starch on the formal
                 shirts. Please ensure no plastic hangers are
@@ -242,14 +253,9 @@ const Customers = () => {
             </div>
           </div>
 
-          {/* RIGHT */}
-
           <div className="customer-right">
-
             <div className="lifecycle-card">
-
               <h3>Order Lifecycle</h3>
-
               <p>
                 Track and update processing stage
               </p>
@@ -320,46 +326,32 @@ const Customers = () => {
               <button className="advance-btn">
                 Advance to Next Stage
               </button>
-
               <div className="advance-btn-text">
                 <span>LAST UPDATED BY ADMIN 2 MINS AGO</span>
               </div>
             </div>
 
             <div className="driver-card">
-
               <h3>Driver Information</h3>
-
               <div className="driver-box">
-
                 <Truck size={35} />
-
                 <p>No driver assigned yet</p>
-
               </div>
-
               <button className="assign-btn">
                 Assign Driver
               </button>
-              
-
             </div>
-
           </div>
-
-        </div>
+         </div>
 
           <div className="dashboard-footer">
-
               <p>
                 © 2026 PrimePress Laundry Admin Dashboard •
                 Quality Service Tracking
               </p>
-
             </div>
 
       </div>
-
     </div>
   );
 };
