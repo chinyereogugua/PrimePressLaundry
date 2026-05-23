@@ -1,0 +1,408 @@
+.customers-page{
+    display: flex;
+    min-height: 100vh;
+    background: white;
+    font-family: Arial, sans-serif;
+}
+
+.customers-main{
+    flex: 1;
+    padding: 0 25px 25px;
+}
+
+.breadcrumb-section{
+    margin: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.breadcrumb{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.print-btn{
+    border: 1px solid #e5e7eb;
+    background: white;
+    padding: 11px 18px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.customer-grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+}
+
+.order-card{
+    background: white;
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid #f1f5f9;
+}
+
+.order-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-info{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.order-info h2{
+    font-size: 19px;
+}
+
+.order-icon{
+    width: 65px;
+    height: 65px;
+    background: #dff8fb;
+    color: rgba(0, 163, 170, 1);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-tags{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.order-tags span{
+    background: white;
+    border: 1px solid lightgray;
+    padding: 5px 12px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.order-tags p{
+    color: gray;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.order-summary{
+    display: flex;
+    gap: 30px;
+}
+
+.order-summary-texts{
+    text-align: center;
+}
+
+.order-summary p{
+    color: gray;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.summary-pd{
+    font-size: 12px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+
+.order-summary h3{
+    color: rgba(0, 163, 170, 1);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.details-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.details-card{
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid #f1f5f9;
+}
+
+.details-card h3{
+    margin-bottom: 25px;
+}
+
+.details-header{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 10px;
+    /* background-color: #00bcd4; */
+    margin-bottom: 25px;
+}
+
+.details-header h3{
+    margin: 0;
+}
+
+.details-header-icon{
+    width: 38px;
+    height: 38px;
+    /* background: #e6f9fc; */
+    /* color: #00bcd4; */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.details-header-icon img{
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    object-fit: contain;
+}
+
+.details-item{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 22px;
+    color: #6b7280;
+}
+
+.details-item h5{
+    color: #111827;
+    margin-top: 5px;
+}
+
+.service-table{
+    margin-top: 25px;
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid #f1f5f9;
+}
+
+.table-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table-header p{
+    color: gray;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.table-header button{
+    border: none;
+    background: none;
+    color: rgba(0, 163, 170, 1);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+table{
+    width: 100%;
+    /* border-collapse: collapse; */
+}
+
+thead{
+    background: #f9fafb;
+}
+
+th{
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+    color: black;
+}
+
+td{
+    padding: 18px 15px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.td-Des{
+    font-size: 17px;
+}
+
+.table-tag{
+    background: #f3f4f6;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: gray;
+}
+
+.table-tag-num{
+    font-size: 16px;
+}
+
+.table-tag-tot{
+    font-weight: bold;
+}
+
+.table-total{
+    width: 250px;
+    margin-left: auto;
+    margin-top: 30px;
+}
+
+.table-total div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.table-total p{
+    font-size: 16px;
+}
+
+.grand-total{
+    margin-top: 20px;
+}
+
+.grand-total h3{
+    color: rgba(0, 163, 170, 1);
+}
+.grand-total p{
+    font-weight: bold;
+}
+
+.admin-notes{
+    margin-top: 35px;
+}
+
+.admin-notes h4{
+    color: #111827;
+    margin-bottom: 18px;
+}
+
+.admin-notes p{
+    color: #00bcd4;
+    font-style: italic;
+    line-height: 1.8;
+    max-width: 700px;
+}
+
+.lifecycle-card,
+.driver-card{
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid #f1f5f9;
+}
+
+.lifecycle-card p{
+    color: gray;
+    margin-top: 5px;
+}
+
+.lifecycle-steps{
+    margin-top: 30px;
+}
+
+.lifecycle-steps p{
+    font-size: 17px;
+}
+
+.step{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.step-circle{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+
+.step.active .step-circle{
+    background: rgba(0, 163, 170, 1);
+    color: white;
+}
+
+.step h4{
+    margin-bottom: 4px;
+}
+
+.step p{
+    font-size: 15px;
+}
+
+.advance-btn,
+.assign-btn{
+    width: 100%;
+    border: none;
+    background: rgba(0, 163, 170, 1);
+    color: white;
+    padding: 14px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.advance-btn-text{
+    margin-top: 15px;
+    /* background-color: #00bcd4; */
+    display: flex;
+    justify-content: center;
+}
+
+.advance-btn-text span{
+    font-size: small;
+    font-weight: bold;
+}
+
+.driver-card{
+    margin-top: 25px;
+}
+
+.driver-box{
+    margin-top: 20px;
+    border: 2px dashed #dbe3ea;
+    border-radius: 18px;
+    padding: 35px 20px;
+    text-align: center;
+    color: gray;
+}
+
+.driver-box p{
+    margin-top: 10px;
+}
+
+.dashboard-footer{
+    margin-top: 45px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.dashboard-footer p{
+    color: #111827;
+    font-size: 15px;
+    font-weight: 600;
+}
