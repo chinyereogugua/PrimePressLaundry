@@ -10,6 +10,7 @@ import LoginForgetpassword from "./Pages/Auth/LoginForgetpassword.jsx"
 import LoginEmailverify from "./Pages/Auth/LoginEmailverify.jsx"
 import LoginResetpassword from "./Pages/Auth/LoginResetpassword.jsx"
 import Dashboard from './Pages/Dashboard.jsx'
+import Customers from "./Pages/Customers.jsx";
 
 const App = () => {
   return (
@@ -25,7 +26,8 @@ const App = () => {
           <Route path="/loginForgetpassword" element={<LoginForgetpassword />} />
           <Route path="/loginemailverify" element={<LoginEmailverify />} />
           <Route path="/loginresetpassword" element={<LoginResetpassword />} />
-          <Route path='/dashboard' element={<Dashboard />}/>
+          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path="/customers" element={<Customers />} />
         </Routes>
     </HashRouter>
     </>
