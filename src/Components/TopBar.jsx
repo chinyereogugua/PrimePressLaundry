@@ -23,15 +23,14 @@ const TopBar = ({title}) => {
       <div className="topbar-right">
         <Bell className="bell-icon" size={20} />
         <div className="admin-profile">
-          <img
-            src="https://i.pravatar.cc/100"
-            alt="admin"
-          />
           <div>
             <h4>Admin User</h4>
             <p>Store Manager</p>
           </div>
-
+            <img
+            src="https://i.pravatar.cc/100"
+            alt="admin"
+          />
         </div>
       </div>
     </div>
