@@ -13,8 +13,10 @@ import {
 } from "lucide-react";
 import SideBar from "../Components/SideBar";
 import TopBar from "../Components/TopBar";
+import { useNavigate } from "react-router-dom";
 
 const Customers = () => {
+const nav = useNavigate()
   return (
     <div className="customers-page">
       <SideBar />
@@ -342,7 +344,7 @@ const Customers = () => {
                 <Truck size={35} />
                 <p>No driver assigned yet</p>
               </div>
-              <button className="assign-btn">
+              <button className="assign-btn" onClick={()=> nav("/assigndriver")}>
                 Assign Driver
               </button>
             </div>
