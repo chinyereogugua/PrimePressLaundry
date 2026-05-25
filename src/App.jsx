@@ -12,7 +12,8 @@ import LoginResetpassword from "./Pages/Auth/LoginResetpassword.jsx"
 import Dashboard from './Pages/Dashboard.jsx'
 import Order from "./Pages/Order.jsx"
 import Customers from "./Pages/Customers.jsx";
-import Assigndriver from "./Pages/Assigndriver.jsx";
+import ReviewAnalytics from "./Pages/ReviewAnalytics.jsx";
+import Assigndriver from "./Pages/Assigndriver.jsx"
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
           <Route path='/dashboard' element={<Dashboard />}/>
           <Route path="/order" element={<Order />} />
           <Route path="/customers" element={<Customers />} />
+          <Route path="/analytics" element={<ReviewAnalytics />}/>
           <Route path="/assigndriver" element={<Assigndriver />} />
         </Routes>
     </HashRouter>

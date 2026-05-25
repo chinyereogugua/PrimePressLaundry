@@ -334,7 +334,12 @@ const nav = useNavigate()
             </div>
 
             <div className="driver-card">
-              <h3>Driver Information</h3>
+                <div className="details-header" >
+                 <div className="details-header-icon">
+                        <Truck size={18}/>
+                    </div>
+                 <h3>Driver Information</h3>
+                 </div>
               <div className="driver-box">
                 <Truck size={35} />
                 <p>No driver assigned yet</p>

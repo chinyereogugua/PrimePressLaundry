@@ -23,7 +23,7 @@ const orders = [
     <div className='order-container'>
         <SideBar/>
         <div className='order-wrapper'>
-            <TopBar title={"Overview"}/>
+            <TopBar title={"Orders"}/>
             <div className="om-content">
               <div className="om-header">
                 <div>

@@ -20,7 +20,7 @@ const Header = () => {
                 <h2 className='header-middle2' onClick={() => nav("/pick")}>Pickup</h2>
             </article>
             <article className='header-right'>
-                <h2 onClick={()=> nav ("/signup")}>Sign Up</h2>
+                <h2 onClick={()=> nav ("/login")}>Login</h2>
                 <Button className="header-right-btn" onClick={()=> nav("/pick")} btnText="Book Now" />
             </article>
         </section>

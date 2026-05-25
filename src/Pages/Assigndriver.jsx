@@ -1,282 +1,171 @@
-import React from "react";
-import "./Css/Assigndriver.css"
-import { MapPin, CalendarDays, ChevronLeft } from "lucide-react";
+import React, { useState } from 'react';
+import "./Css/Assigndriver.css";
+import Sidebar from "../Components/SideBar.jsx";
+import { Calendar, Clock, MapPin, Truck, ArrowLeft} from 'lucide-react';
+import Topbar from "../Components/TopBar.jsx";
 
-const AssignDriver = () => {
+export default function AssignDriverPage() {
+  const [selectedDriver, setSelectedDriver] = useState('');
+
   return (
-    <div className="layout">
+    <div className="dashboardLayout">
+      <Sidebar />
+      <div className="mainContentWrapper">
+        <Topbar title={"Order Details #ORD-8291"}/>
+        
+        <main className="pageBody">
+          <button className="backButton">
+            <span className="backArrow">
+              <ArrowLeft size={20} />
+              </span> Back to Order Details
+          </button>
 
-      {/* SIDEBAR */}
-      <aside className="sidebar">
-        <div className="logo">Admin</div>
-        <nav>
-          <p>Dashboard</p>
-          <p>Orders</p>
-          <p>Drivers</p>
-        </nav>
-      </aside>
-
-      {/* MAIN */}
-      <div className="main">
-
-        {/* TOPBAR */}
-        <header className="topbar">
-          <h3>Order Details #ORD-8291</h3>
-        </header>
-
-        {/* CONTENT */}
-        <section className="content">
-
-          {/* BACK */}
-          <div className="back">
-            <ChevronLeft size={16} />
-            Back to Order Details
+          <div className="pageHeaderRow">
+            <div>
+              <h2 className="pageTitle">Assign Driver</h2>
+              <p className="pageSubtitle">
+                Assign a driver for pickup and delivery of order #ORD-8291
+              </p>
+            </div>
+            {/* The vertical three-dot action button */}
+            <button className="moreOptionsBtn">
+              <span className="dots"></span>
+            </button>
           </div>
-
-          {/* TITLE */}
-          <div className="heading">
-            <h1>Assign Driver</h1>
-            <p>Assign a driver for pickup and delivery of order #ORD-8291</p>
-          </div>
-
-          {/* GRID */}
-          <div className="grid">
-
-            {/* LEFT CARD */}
-            <div className="card summary">
-
-              <h3>Order Summary</h3>
-
-              <div className="block">
-                <span>ORDER ID</span>
-                <p>ORD-8291</p>
+          <div className="contentGrid">
+            <section className="card">
+              <h3 className="cardTitle">Order Summary</h3>
+              
+              <div className="summaryGroup">
+                <label>ORDER ID</label>
+                <p className="boldText">ORD-8291</p>
               </div>
 
-              <div className="block">
-                <span>CUSTOMER NAME</span>
+              <div className="summaryGroup">
+                <label>CUSTOMER NAME</label>
                 <p>Sarah Johnson</p>
               </div>
 
-              <div className="block">
-                <span>PHONE NUMBER</span>
-                <p>+1 (555) 123-9871</p>
+              <div className="summaryGroup">
+                <label>PHONE NUMBER</label>
+                <p>+1 (555) 234-8901</p>
               </div>
 
-              <div className="block">
-                <span>EMAIL ADDRESS</span>
-                <p>s.johnson@gmail.com</p>
+              <div className="summaryGroup">
+                <label>EMAIL ADDRESS</label>
+                <p className="emailText">s.johnson@gmail.com</p>
               </div>
 
-              <div className="block">
-                <span>PICKUP ADDRESS</span>
-                <div className="row">
-                  <MapPin size={14} />
-                  <p>456 Evergreen Terrace, Seattle</p>
-                </div>
+              <div className="summaryGroup">
+                <label>PICKUP ADDRESS</label>
+                <p className="addressText">
+                  <span className="addressIcon locationBlue">
+                    <MapPin size={17} color="rgba(21, 93, 252, 1)" /> 
+                    </span> 124, Bluebell Lane, Seattle
+                </p>
               </div>
 
-              <div className="block">
-                <span>DELIVERY ADDRESS</span>
-                <div className="row">
-                  <MapPin size={14} />
-                  <p>124 BlueVille Avenue, Seattle</p>
-                </div>
+              <div className="summaryGroup">
+                <label>DELIVERY ADDRESS</label>
+                <p className="addressText">
+                  <span className="addressIcon locationGreen">
+                    <MapPin size={17} color="rgba(0, 166, 62, 1)" /> 
+                    </span> 124, Bluebell Lane, Seattle
+                </p>
               </div>
-
-            </div>
-
-            {/* RIGHT SIDE STACK */}
-            <div className="right">
-
-              {/* DRIVER CARD */}
-              <div className="card">
-
-                <h3>Assign Driver</h3>
-
-                <label>Select Driver</label>
-                <select>
-                  <option>Choose driver</option>
-                  <option>Michael Smith</option>
-                  <option>John Carter</option>
-                </select>
-
-                <div className="info">
-                  <p><b>Driver Phone:</b> +1 555 444 222</p>
-                  <p><b>Vehicle:</b> Van</p>
-                  <p><b>Plate:</b> LA-54RTY</p>
+            </section>
+            <div className="rightColumn">
+              <section className="card">
+                <h3 className="cardTitle">Assign Driver</h3>
+                
+                <div className="formGroup">
+                  <label>Select Driver</label>
+                  <div className="selectWrapper">
+                    <select 
+                      value={selectedDriver} 
+                      onChange={(e) => setSelectedDriver(e.target.value)}
+                      className="formSelect"
+                    >
+                      <option value="">Choose a driver</option>
+                      <option value="driver1">Alex Smith (Van)</option>
+                    </select>
+                  </div>
                 </div>
 
-              </div>
-
-              {/* SCHEDULE CARD */}
-              <div className="card">
-
-                <h3>Schedule</h3>
-
-                <label>Pickup Date</label>
-                <input type="date" />
-
-                <label>Pickup Time</label>
-                <input type="time" />
-
-                <label>Delivery Window</label>
-                <div className="time">
-                  <input type="time" />
-                  <span>to</span>
-                  <input type="time" />
+                <div className="metaRow">
+                  <label>DRIVER PHONE NUMBER</label>
+                  <p>+1 (555) 434-8020</p>
                 </div>
 
-                <button className="btn">
-                  <CalendarDays size={16} />
-                  Assign Driver
-                </button>
+                <div className="metaRow">
+                  <label>VEHICLE TYPE</label>
+                  <p>van</p>
+                </div>
 
-              </div>
+                <div className="metaRow">
+                  <label>VEHICLE PLATE NUMBER</label>
+                  <p>LA-543KT</p>
+                </div>
+              </section>
 
+              {/* Schedule Configuration Card */}
+              <section className="card">
+                <h3 className="cardTitle">Schedule</h3>
+                
+                <div className="formGroup">
+                  <label>Pickup Date</label>
+                  <div className="inputIconWrapper">
+                    <span className="inputIcon">
+                      <Calendar size={17} color="#8a8a8a" />
+                    </span>
+                    <input type="text" disabled className="formInputDisabled" placeholder="05/26/2026" />
+                  </div>
+                </div>
+
+                <div className="formGroup">
+                  <label>Pickup Time</label>
+                  <div className="inputIconWrapper">
+                    <span className="inputIcon">
+                      <Clock size={17} color="#8a8a8a" />
+                    </span>
+                    <input type="text" disabled className="formInputDisabled" placeholder="10:00 AM" />
+                  </div>
+                </div>
+
+                <div className="formGroup">
+                  <label>Delivery Time Window</label>
+                  <div className="rangeInputs">
+                    <div className="inputIconWrapper">
+                      <span className="inputIcon">
+                        <Clock size={17} color="#8a8a8a" />
+                      </span>
+                      <input type="text" disabled className="formInputDisabled" placeholder="02:00 PM" />
+                    </div>
+                    <div className="inputIconWrapper">
+                      <span className="inputIcon">
+                        <Clock size={17} color="#8a8a8a" />
+                      </span>
+                      <input type="text" disabled className="formInputDisabled" placeholder="04:00 PM" />
+                    </div>
+                  </div>
+                  <span className="fieldHint">Example: 2 PM - 4 PM</span>
+                </div>
+              </section>
+
+              {/* Primary Dispatch Action Button */}
+              <button className="primarySubmitBtn">
+                <span className="btnIcon">
+                  <Truck size={17} color="white" />
+                  </span> Assign Driver
+              </button>
             </div>
 
           </div>
-
-        </section>
-
+        </main>
         <footer className="footer">
-          © 2026 Admin Panel
+          © 2026 PrimePress Laundry Admin Dashboard • Quality Service Tracking
         </footer>
-
       </div>
     </div>
   );
-};
-
-export default AssignDriver;
-// const Assigndriver = () => {
-//   return (
-//     <div className="admin-layout">
-//       {/* Fixed Left Sidebar */}
-//       <div className="layout-sidebar">
-//         <SideBar />
-//       </div>
-
-//       {/* Right Side Content Area */}
-//       <div className="layout-main">
-//         <TopBar />
-        
-//         {/* Scrollable Workspace Container */}
-//         <main className="workspace-content">
-//           {/* Back Navigation Link */}
-//           <div className="back-navigation">
-//             <span className="back-arrow">←</span> Back to Order Details
-//           </div>
-
-//           <h1 className="page-title">Assign Driver</h1>
-//           <p className="page-subtitle">Assign a driver for pickup and delivery of order #ORD-8291</p>
-
-//           {/* Core Dashboard Cards Grid */}
-//           <div className="dashboard-grid">
-            
-//             {/* Left Card: Order Summary */}
-//             <div className="dashboard-card">
-//               <h2 className="card-title">Order Summary</h2>
-              
-//               <div className="summary-group">
-//                 <label>ORDER ID</label>
-//                 <p className="highlight-text">ORD-8291</p>
-//               </div>
-
-//               <div className="summary-group">
-//                 <label>CUSTOMER NAME</label>
-//                 <p>Sarah Johnson</p>
-//               </div>
-
-//               <div className="summary-group">
-//                 <label>PHONE NUMBER</label>
-//                 <p>+1 (555) 234-8901</p>
-//               </div>
-
-//               <div className="summary-group">
-//                 <label>EMAIL ADDRESS</label>
-//                 <p>s.johnson@gmail.com</p>
-//               </div>
-
-//               <div className="summary-group">
-//                 <label className="icon-label pickup">● Pickup Address</label>
-//                 <p>124, Bluebell Lane, Seattle</p>
-//               </div>
-
-//               <div className="summary-group">
-//                 <label className="icon-label delivery">● Delivery Address</label>
-//                 <p>124, Bluebell Lane, Seattle</p>
-//               </div>
-//             </div>
-
-//             {/* Right Stacked Forms */}
-//             <div className="form-stack">
-              
-//               {/* Form Card 1: Assign Driver */}
-//               <div className="dashboard-card">
-//                 <h2 className="card-title">Assign Driver</h2>
-                
-//                 <div className="form-group">
-//                   <label>Select Driver</label>
-//                   <select className="form-select" defaultValue="">
-//                     <option value="" disabled>Choose a driver</option>
-//                     <option value="driver1">Alex Smith</option>
-//                     <option value="driver2">John Doe</option>
-//                   </select>
-//                 </div>
-
-//                 <div className="driver-details-grid">
-//                   <div>
-//                     <label>DRIVER PHONE NUMBER</label>
-//                     <p>+1 (555) 434-9809</p>
-//                   </div>
-//                   <div>
-//                     <label>VEHICLE TYPE</label>
-//                     <p>Van</p>
-//                   </div>
-//                   <div>
-//                     <label>VEHICLE PLATE NUMBER</label>
-//                     <p>LA-5436T</p>
-//                   </div>
-//                 </div>
-//               </div>
-
-//               {/* Form Card 2: Schedule */}
-//               <div className="dashboard-card">
-//                 <h2 className="card-title">Schedule</h2>
-                
-//                 <div className="form-group">
-//                   <label>Pickup Date</label>
-//                   <input type="date" className="form-input" />
-//                 </div>
-
-//                 <div className="form-group">
-//                   <label>Pickup Time</label>
-//                   <input type="time" className="form-input" />
-//                 </div>
-
-//                 <div className="form-group">
-//                   <label>Delivery Time Window</label>
-//                   <div className="time-window-inputs">
-//                     <input type="time" className="form-input" />
-//                     <span className="time-separator">to</span>
-//                     <input type="time" className="form-input" />
-//                   </div>
-//                   <span className="field-hint">Example: 2 PM - 4 PM</span>
-//                 </div>
-//               </div>
-
-//               {/* Action Button */}
-//               <button type="button" className="btn-assign">
-//                 <span className="btn-icon">📋</span> Assign Driver
-//               </button>
-
-//             </div>
-//           </div>
-//         </main>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Assigndriver;
+}
