@@ -8,12 +8,12 @@ const Services = () => {
     <main className='services-container'>
       <section className='services-wrapper'>
       <section className='services-left'>
-       <div class="image-wrapper">
-  <div class="img-large">
+       <div className="image-wrapper">
+  <div className="img-large">
     <img src={Rectangle5} alt="" />
   </div>
   
-  <div class="img-small">
+  <div className="img-small">
     <img src={Rectangle6} alt="" />
   </div>
 </div>
