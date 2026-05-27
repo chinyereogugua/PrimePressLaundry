@@ -48,6 +48,7 @@ const handleChange = (e) => {
       toast.success(res.message);
       localStorage.removeItem("resetEmail");
       nav("/login")
+      
     } catch (error) {
       console.log("ERROR RESPONSE:", error.response);
       console.log("ERROR DATA:", error.response?.data);
