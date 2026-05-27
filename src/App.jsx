@@ -14,6 +14,7 @@ import Order from "./Pages/Order.jsx"
 import Customers from "./Pages/Customers.jsx";
 import ReviewAnalytics from "./Pages/ReviewAnalytics.jsx";
 import Assigndriver from "./Pages/Assigndriver.jsx"
+import ForgetPasswordVerify from "./Pages/Auth/ForgetPasswordVerify.jsx";
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
           <Route path="/customers" element={<Customers />} />
           <Route path="/analytics" element={<ReviewAnalytics />}/>
           <Route path="/assigndriver" element={<Assigndriver />} />
+          <Route path="/forgetpasswordverify" element={<ForgetPasswordVerify />} />
         </Routes>
     </HashRouter>
     </>
