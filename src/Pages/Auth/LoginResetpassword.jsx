@@ -3,13 +3,15 @@ import "./Css/LoginResetpassword.css"
 import Primepresslaundrylogo from '../../Components/Primepresslaundrylogo'
 import Input from "../../Components/Input.jsx"
 import Button from "../../Components/Button.jsx"
-import { FaEye } from "react-icons/fa6";
+import { FaEye,FaEyeSlash } from "react-icons/fa6";
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { resetPassword } from '../../API/AdminApi.js'
 
 const LoginResetpassword = () => {
 const nav = useNavigate();
+const [showPassword, setShowPassword] = useState(false);
+const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
 const [passwordInfo, setPasswordInfo] = useState({
     password: "",
@@ -48,6 +50,7 @@ const handleChange = (e) => {
       toast.success(res.message);
       localStorage.removeItem("resetEmail");
       nav("/login")
+
     } catch (error) {
       console.log("ERROR RESPONSE:", error.response);
       console.log("ERROR DATA:", error.response?.data);
@@ -73,26 +76,35 @@ const handleChange = (e) => {
             <p> Enter New password</p>
             <article className='loginResetpassword-password-holder'>
             <Input 
+            type={showPassword ? "text" : "password"}
             placeholder="New password" 
             className="loginResetpassword-password-input"
             name="password"
             value={passwordInfo.password}
             onChange={handleChange}
             />
-            <FaEye className='loginResetpassword-password-icon'/>
+            <FaEye 
+            className='loginResetpassword-password-icon'
+            onClick={() => setShowPassword(!showPassword)}
+            />
             </article>
           </article>
           <article className='loginResetpassword-newpassword'>
             <p> Confirm New password</p>
             <article className='loginResetpassword-newpassword-holder'>
             <Input 
+            type={showConfirmPassword ? "text" : "password"}
             placeholder="Confirm new password" 
             className="loginResetpassword-newpassword-input"
             name="confirmPassword"
             value={passwordInfo.confirmPassword}
             onChange={handleChange}
             />
-            <FaEye className='loginResetpassword-newpassword-icon'/>
+            
+            <FaEye 
+            className='loginResetpassword-newpassword-icon'
+            onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+            />
             </article>
           </article>
           <article className='loginResetpassword-button'>

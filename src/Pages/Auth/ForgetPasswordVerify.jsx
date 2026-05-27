@@ -59,7 +59,6 @@ const ForgetPasswordVerify = () => {
         const res = await forgetPasswordOTP(data);
         console.log("FULL RESPONSE:", res);
         toast.success(res.message);
-        localStorage.removeItem("resetEmail");
         nav("/loginresetpassword");
         
     } catch (error) {
