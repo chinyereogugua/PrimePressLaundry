@@ -6,7 +6,7 @@ import Button from "../../Components/Button.jsx"
 import { FaEye } from "react-icons/fa6";
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
-import { resetPassword } from '../../api/adminApi.js'
+import { resetPassword } from '../../API/AdminApi.js'
 
 const LoginResetpassword = () => {
 const nav = useNavigate();

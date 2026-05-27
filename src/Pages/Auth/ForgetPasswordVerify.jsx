@@ -5,7 +5,7 @@ import Input from "../../Components/Input.jsx";
 import Button from "../../Components/Button.jsx";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { forgetPasswordOTP } from "../../api/adminApi.js";
+import { forgetPasswordOTP } from "../../API/AdminApi.js";
 
 
 
