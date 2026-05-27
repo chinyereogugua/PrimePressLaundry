@@ -11,7 +11,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import { signupSchema } from "../../schemas/signupSchema";
-import { signupAdmin } from "../../api/adminApi";
+import { signupAdmin } from "../../API/AdminApi.js";
 
 import { toast } from "react-toastify";
 
@@ -33,68 +33,65 @@ const Signup = () => {
 
   const onSubmit = async (data) => {
     try {
-      console.log("SUBMIT DATA:", data);
-
       const response = await signupAdmin(data);
 
-      console.log("RESPONSE:", response);
+      console.log("SIGNUP RESPONSE:", response);
 
-      toast.success("Signup successful");
+      // store email for OTP verification
+      localStorage.setItem("adminEmail", data.emailAddress);
+
+      toast.success(response?.message || "Signup successful");
 
       nav("/signupemailverify");
-
     } catch (error) {
-  console.log(error);
-  toast.error(
-    error.response?.data?.message ||
-    error.message ||
-    "Signup failed"
-  );
-}
+      console.log("SIGNUP ERROR:", error);
+
+      toast.error(
+        error.response?.data?.message ||
+          "Signup failed"
+      );
+    }
   };
 
   return (
     <main className="signup-container">
-
       <section className="signup-wrapperlogo">
         <Primepresslaundrylogo />
       </section>
 
       <section className="signup-wrappertext">
-
         <form
           className="signup-wrappertext-holder"
           onSubmit={handleSubmit(onSubmit)}
         >
 
+          {/* FULL NAME */}
           <article className="signup-fullname">
             <p>Full Name</p>
-
             <Input
               placeholder="Full Name"
-              className="signup-fullname-input"
               {...register("fullName")}
+              className="signup-fullname-input"
             />
-
             <small className="error-text">
               {errors.fullName?.message}
             </small>
           </article>
 
+          {/* EMAIL */}
           <article className="signup-email">
             <p>Email</p>
-
             <Input
               placeholder="Email"
-              className="signup-email-input"
               {...register("emailAddress")}
+              className="signup-email-input"
             />
-
             <small className="error-text">
               {errors.emailAddress?.message}
             </small>
           </article>
 
+          {/* PASSWORD */}
           <article className="signup-password">
             <p>Password</p>
 
@@ -102,15 +99,12 @@ const Signup = () => {
               <Input
                 type={showPassword ? "text" : "password"}
                 placeholder="Password"
-                className="signup-password-input"
                 {...register("password")}
+                className="signup-password-input"
               />
 
-              <span
-                className="eye-icon"
-                onClick={() => setShowPassword(!showPassword)}
-              >
-                {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+              <span className="eye-icon" onClick={() => setShowPassword(!showPassword)}>
+                {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
               </span>
             </div>
 
@@ -119,6 +113,7 @@ const Signup = () => {
             </small>
           </article>
 
+          {/* CONFIRM PASSWORD */}
           <article className="signup-confirmpassword">
             <p>Confirm Password</p>
 
@@ -126,8 +121,8 @@ const Signup = () => {
               <Input
                 type={showConfirmPassword ? "text" : "password"}
                 placeholder="Confirm Password"
-                className="signup-confirmpassword-input"
                 {...register("confirmPassword")}
+                className="signup-confirmpassword-input"
               />
 
               <span
@@ -136,7 +131,7 @@ const Signup = () => {
                   setShowConfirmPassword(!showConfirmPassword)
                 }
               >
-                {showConfirmPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
               </span>
             </div>
 
@@ -145,19 +140,18 @@ const Signup = () => {
             </small>
           </article>
 
+          {/* BUTTON */}
           <article className="signup-button">
             <Button
-              className="signup-btn"
+              type="submit"
               btnText={
-                isSubmitting
-                  ? "Creating Account..."
-                  : "Sign up"
+                isSubmitting ? "Creating Account..." : "Sign Up"
               }
+              className="signup-btn"
             />
           </article>
 
         </form>
-
       </section>
     </main>
   );
