@@ -121,7 +121,8 @@
 }
 
 .signup-btn {
-    width: 100%;
+    width: 100% !important;
     height: 56px;
     cursor: pointer;
+    /* background-color:rgba(0, 163, 170, 1) ; */
 }

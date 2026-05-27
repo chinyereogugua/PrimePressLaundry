@@ -4,7 +4,7 @@ import Primepresslaundrylogo from "../../Components/Primepresslaundrylogo.jsx";
 import Input from "../../Components/Input.jsx";
 import Button from "../../Components/Button.jsx";
 import { useNavigate } from "react-router-dom";
-import { forgetPassword } from "../../api/adminApi.js";
+import {  forgetPassword } from "../../API/AdminApi.js";
 import { toast } from "react-toastify";
 
 
