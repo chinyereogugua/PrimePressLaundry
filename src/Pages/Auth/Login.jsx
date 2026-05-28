@@ -43,11 +43,9 @@ const Login = () => {
       console.log("LOGIN REQUEST:", data);
 
       const res = await loginAdmin(data);
-
-      console.log("LOGIN RESPONSE OBJECT:", res);
+      console.log("USER OBJECT FROM LOGIN:", res);
 
       const token = res?.token || res?.data?.token || res?.data?.data?.token;
-
       console.log("EXTRACTED TOKEN VALUE:", token);
 
       if (!token || token === "" || token === "undefined") {
@@ -56,6 +54,8 @@ const Login = () => {
       }
 
       localStorage.setItem("token", token);
+      localStorage.setItem("user",JSON.stringify({emailAddress,}));
+
       toast.success(res.message || "Login successful!");
 
       setMessage(res.message || "Login successful");
@@ -66,9 +66,7 @@ const Login = () => {
       console.log("LOGIN ERROR DETAILS:", err);
       
       const errMsg = err.response?.data?.message || "Wrong email or password";
-
       toast.error(errMsg);
-
       setMessage(errMsg);
 
       return;
@@ -105,7 +103,7 @@ const Login = () => {
 
             <article className="login-password-holder">
               <Input
-                type={showPassword ? "text" : "password"}   // 👁️ TOGGLE HERE
+                type={showPassword ? "text" : "password"} 
                 placeholder="Password"
                 className="login-password-input"
                 value={password}

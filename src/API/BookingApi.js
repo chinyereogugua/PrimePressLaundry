@@ -8,3 +8,9 @@ export const createBooking = async (data) => {
 
   return res.data;
 };
+
+export const getAllBookings = async () => {
+  const res = await API.get("/booking/allbooks");
+  console.log("ALL BOOKINGS:", res);
+  return res.data;
+};

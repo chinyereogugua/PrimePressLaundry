@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Css/Dashboard.css";
 import {
   FileText,
@@ -10,8 +10,32 @@ import {
 } from "lucide-react";
 import SideBar from "../Components/SideBar";
 import TopBar from "../Components/TopBar";
+import { getAllBookings } from "../API/BookingApi";
+import { jwtDecode } from "jwt-decode";
 
 const Dashboard = () => {
+  const [bookings, setBookings] = useState([]);
+  
+  const token = localStorage.getItem("token");
+  const user = token ? jwtDecode(token) : null;
+  const displayName = user?.fullName || user?.name || user?.emailAddress?.split("@")[0];
+
+  useEffect(() => {
+  const fetchBookings = async () => {
+    try {
+      const res = await getAllBookings();
+      console.log("ALL BOOKINGS:", res);
+     
+
+      setBookings(res.data || res);
+    } catch (error) {
+      console.log("FETCH ERROR:", error);
+    }
+  };
+
+  fetchBookings();
+}, []);
+
   return (
     <div className="dashboard">
         <SideBar/>
@@ -20,7 +44,7 @@ const Dashboard = () => {
 
         <div className="welcome-top">
         <div className="welcome-section">
-          <h1>Welcome back, Admin</h1>
+          <h1>Welcome back, {displayName}</h1>
           <p>
             Here is what's happening with your laundry facility today.
           </p>
@@ -113,7 +137,29 @@ const Dashboard = () => {
                 <th>Action</th>
               </tr>
             </thead>
+
             <tbody>
+                {bookings.map((item) => (
+            <tr key={item._id}>
+               <td>{item._id}</td>
+               <td>{item.name}</td>
+               <td>{item.pickUpAddress}</td>
+               <td>{item.pickUpDateAndTime}</td>
+            <td>
+              <span className="status pending">
+                  New Request
+              </span>
+            </td>
+          <td>
+             <button className="view-btn">
+                View Order
+            </button>
+          </td>
+         </tr>
+        ))}
+     </tbody>
+
+            {/* <tbody>
               <tr>
                 <td>ORD-8821</td>
                 <td>Sarah Jenkins</td>
@@ -198,7 +244,7 @@ const Dashboard = () => {
                   </button>
                 </td>
               </tr>
-            </tbody>
+            </tbody> */}
           </table>
         </div>
 
